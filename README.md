@@ -21,7 +21,7 @@ Sequences are split into **25-residue patches** (up to 40 patches / 1000 residue
 ## Installation
 
 ```bash
-git clone https://github.com/<user>/PatchEX.git
+git clone https://github.com/RIA-lab/PatchEX.git
 cd PatchEX
 
 conda create -n patchex python=3.10 -y
@@ -43,7 +43,7 @@ python -c "import patchex; print(patchex.__version__)"
 ### Checkpoints
 
 Download the six released checkpoints (3 seeds × 2 tasks, ~75 MB each) into `checkpoints/`:
-
+https://doi.org/10.5281/zenodo.21847056
 ```
 checkpoints/
 ├── patchex_opt_s0.pt   patchex_opt_s1.pt   patchex_opt_s2.pt    # T_opt
@@ -233,20 +233,3 @@ examples/           example FASTA
 - Training used no species input; the optional species head is disabled in the
   released configuration.
 
-## Citation
-
-```bibtex
-@article{patchex,
-  title  = {PatchEX: interpretable prediction of enzyme optimal temperature and pH
-            with supervised patch-level functional-site maps},
-  author = {...},
-  year   = {2026}
-}
-```
-
-PatchEX inherits its patch encoder from **PatchET**, which adapts **PatchTST**
-(Nie et al., ICLR 2023). Please cite those works as well.
-
-## License
-
-MIT — see `LICENSE`.
